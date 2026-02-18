@@ -7,6 +7,34 @@ Cette page se veut présenter la méthodologie à l'œuvre dans le cadre de l’
 Nous veillerons à utiliser le logiciel d’annotation INCEpTION.
 C'est un outil open-source ; la documentation française et anglaise est accessible en fin de document.
 
+## Comment vas-t-on annoter ?
+
+On utilisera les layers pour spécifier soit un paragraphe entier, soit une suite de token.
+Les layers servent à donner une information générale :
+- Est-ce une **scène d'accouchement** ?
+- Quelle est la **phase d'accouchement** ?
+- Quels sont les **personnages** en présence ?
+- Fait-on mention de la **grossesse** ?
+- Y a t-il **intervention médicale** ?
+- Y a t-il **complication** ?
+
+De manière binaire, les layers permettent d'indiquer la présence ou absence d'un trait spécifique. Afin de détailler la nature du trait, il est possible de coupler les layers avec des tags - cela se fait en choisissant dans la "boite à outil" d'annotation des layers, sur l'interface utilisateur : 
+- Quelle phase d'accouchement ?
+	- Travail
+	- Dilatation
+	- Expulsion 
+	- Délivrance 
+- Quel personnage ?
+	- Accouchée
+	- Accouchant H
+	- Accouchant F
+	- Témoin
+	- Géniteur
+- Quelle complication ?
+	- *à compléter au fur et à mesure*
+- Quelle intervention médicale ?
+	- *à compléter au fur et à mesure*
+
 _____
 
 # Étapes de paramétrage INCEpTION : 
@@ -126,5 +154,4 @@ ____
 - **user guide INCEpTION fra** :  [https://corli.huma-num.fr/wp-content/uploads/2022/05/Fiche-8-Cre%CC%81ation-dune-couche-dannotation.pdf](https://corli.huma-num.fr/wp-content/uploads/2022/05/Fiche-8-Cre%CC%81ation-dune-couche-dannotation.pdf)  
 - **user guide INCEpTION fra** : [https://corli.huma-num.fr/fr/faq/comment-utiliser-la-plateforme-inception/](https://corli.huma-num.fr/fr/faq/comment-utiliser-la-plateforme-inception/)  
 - **Phases** **accouchement** : [https://www.ameli.fr/assure/sante/devenir-parent/accouchement-nouveau-ne-et-retour-la-maison/accouchement](https://www.ameli.fr/assure/sante/devenir-parent/accouchement-nouveau-ne-et-retour-la-maison/accouchement)  
-
 
