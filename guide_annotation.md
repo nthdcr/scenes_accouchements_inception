@@ -1,68 +1,76 @@
-## Guide d’annotations : scènes d’accouchement dans la littérature
-
-#### 
+# Guide d’annotations : scènes d’accouchement dans la littérature
 
 Cette page se veut présenter la méthodologie à l'œuvre dans le cadre de l’annotation manuelle des scènes d’accouchement dans la littérature.
 
-#### Logiciel d’annotation : 
+## Logiciel d’annotation : 
 
-- Utilisation du logiciel d’annotation **Inception.**
+Nous veillerons à utiliser le logiciel d’annotation INCEpTION.
+C'est un outil open-source ; la documentation française et anglaise est accessible en fin de document.
 
-#### Étapes de paramétrage **Inception** : 
+_____
 
-- #### Création de layer (couche) 
+# Étapes de paramétrage INCEpTION : 
 
-La layer est la couche/catégorie générale d’annotation.
+- ## Création de layer (couche) 
 
-- **scene\_accouchement (granularité scène entière)**  
+La layer est la couche/catégorie générale d’annotation. 
+
+### > **scene\_accouchement (granularité scène entière)**  
   - span  
   - Annotation des scènes d'accouchements : granularité niveau phrase granularity : sentence-level  
-  - overlap : any
+  - **overlap** : any
 
-  - **phase\_accouchement**  
-    - span  
-    - annotation de l’accouchement, dans les scènes d'accouchement  
-    - granularity : token-level  
-    - overlap : any  
+  ### > **phase\_accouchement**  
+- span  
+- annotation de l’accouchement, dans les scènes d'accouchement  
+- granularity : token-level  
+- overlap : any  
     - **features :**   
-      - Phases\_accouchement  
-      - type : primitive: String  
-      - Annotation/identification des différentes phases de l'accouchement  
-      - tagset : Accouchement\_phases  
-      - editor type : combo-box
+	      - Phases\_accouchement  
+	      - **type** : primitive: String  
+	      - Annotation/identification des différentes phases de l'accouchement  
+	      - **tagset** : Accouchement\_phases  
+	      - **editor** **type** : combo-box
 
-  - **personnage**   
-    - span  
-    - Personnages actrices/acteurs dans les scènes d'accouchements  
-    - granularity : token-level  
-    - overlap : any  
+### > **personnage**   
+- span  
+- Personnages actrices/acteurs dans les scènes d'accouchements  
+- **granularity** : token-level  
+- **overlap** : any  
     - **features :**   
-      - Which\_character  
-      - type : primitive: String  
-      - Quel personnage en présence ?  
-      - tagset : Wich\_character\_here  
-      - editor type : combo-box
+	      - Which\_character  
+	      - **type** : primitive: String  
+	      - Quel personnage en présence ?  
+	      - **tagset** : Wich\_character\_here  
+	      - **editor type** : combo-box
 
-- **grossesse (granularité scène entière)**  
-  - span  
+
+### > **grossesse (granularité scène entière)**  
+  -  span  
   - Annotation des scènes d'accouchements : granularité niveau phrase  
   - granularity : sentence-level  
-  - overlap : any
+  - **overlap** : any
 
--   
-- **complication**  
+
+### > **complication**  
   - span  
   - Phases de complication liée aux scènes d'accouchements  
   - granularity : token-level  
-  - overlap : any
+  - **overlap** : any
 
-- #### Création de tagsets :
+
+
+________
+
+
+- ## Création de tagsets :
 
 Les tagsets permettent d’annoter plus précisément ; ils spécifient un layer. 
 
-- **Accouchement\_phases**  
+### > **Accouchement\_phases**  
   - fra  
   - différentes phases de l'accouchement : 
+  *Liste des types choisis* :
 
 - **travail**
 
@@ -87,7 +95,9 @@ Votre bébé est né \! La sage-femme coupe le cordon ombilical, vérifie la bon
 
 L’accouchement ne s’achève réellement que vingt à trente minutes plus tard. Sous l’effet de nouvelles contractions utérines, la maman expulse le . C'est ce qu’on appelle la délivrance.
 
-- **Wich\_character\_here**  
+
+
+### > **Wich\_character\_here**  
   - fra  
   - Différents personnages en présence lors de l'accouchement :  
     - Accouchée  
@@ -96,19 +106,25 @@ L’accouchement ne s’achève réellement que vingt à trente minutes plus tar
     - Témoin  
     - *Géniteur ?*
 
-- **Intervention médicale ?**  
+### > **Intervention médicale
   - fra  
   - Différentes interventions médicales
+	  - *Types d'interventions à préciser*
 
-- **which\_complication**  
+### > **which\_complication**  
   - fra  
   - Différentes complications liées aux phases d’accouchements
+	  - *Types de complications à préciser
 
-#### Documentation consultée : 
 
-- [https://corli.huma-num.fr/wp-content/uploads/2022/05/Fiche-8-Cre%CC%81ation-dune-couche-dannotation.pdf](https://corli.huma-num.fr/wp-content/uploads/2022/05/Fiche-8-Cre%CC%81ation-dune-couche-dannotation.pdf)  
-- [https://corli.huma-num.fr/fr/faq/comment-utiliser-la-plateforme-inception/](https://corli.huma-num.fr/fr/faq/comment-utiliser-la-plateforme-inception/)  
-- Phases accouchement : [https://www.ameli.fr/assure/sante/devenir-parent/accouchement-nouveau-ne-et-retour-la-maison/accouchement](https://www.ameli.fr/assure/sante/devenir-parent/accouchement-nouveau-ne-et-retour-la-maison/accouchement)  
-- 
+
+____
+
+## Documentation consultée : 
+
+- **user guide INCEpTION eng** : https://inception-project.github.io/releases/39.6/docs/user-guide.html
+- **user guide INCEpTION fra** :  [https://corli.huma-num.fr/wp-content/uploads/2022/05/Fiche-8-Cre%CC%81ation-dune-couche-dannotation.pdf](https://corli.huma-num.fr/wp-content/uploads/2022/05/Fiche-8-Cre%CC%81ation-dune-couche-dannotation.pdf)  
+- **user guide INCEpTION fra** : [https://corli.huma-num.fr/fr/faq/comment-utiliser-la-plateforme-inception/](https://corli.huma-num.fr/fr/faq/comment-utiliser-la-plateforme-inception/)  
+- **Phases** **accouchement** : [https://www.ameli.fr/assure/sante/devenir-parent/accouchement-nouveau-ne-et-retour-la-maison/accouchement](https://www.ameli.fr/assure/sante/devenir-parent/accouchement-nouveau-ne-et-retour-la-maison/accouchement)  
 
 
