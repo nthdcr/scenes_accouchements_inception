@@ -1,6 +1,7 @@
 # scenes_accouchements_inception
+## Dans le cadre de LatticIA & Culture Lab : Mother characters in major literary corpora
 
-Dépôt annotation manuelle sur Inception, des scènes d'accouchement dans la littérature.
+Guide d'annotation pour INCEpTION des scènes d'accouchement dans la littérature.
 
 ### Branche doc :
 - Guide d'annotation. À consulter avant manipulation.
