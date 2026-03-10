@@ -35,20 +35,40 @@ De manière binaire, les layers permettent d'indiquer la présence ou absence d'
 - Quelle intervention médicale ?
 	- *à compléter au fur et à mesure*
 
+## Annotation primaire et secondaire :
+
+Il convient de diviser le guide en deux modules distincts :
+
+- **Module A** (Primaire) : La Scène d'Accouchement. C'est le cœur du projet. Il doit regrouper la couche `scene_accouchement` (le contenant) et les couches de détails : `phase_accouchement`, `personnage`, `complication`, et `intervention_medicale`.
+
+- **Module B** (Secondaire) : Le Contexte de la Grossesse. Il s'agit de la couche `grossesse`, utilisée pour le repérage thématique hors du moment de l'accouchement.
+
+## Priorité d'annotation :
+
+Pour faciliter le travail de l'annotateur face à des textes complexes :
+
+ **Règle de prééminence** : Si une phrase décrit une phase active de l'accouchement (travail, expulsion, délivrance), elle doit être annotée prioritairement comme `scene_accouchement` et non comme `grossesse`.
+
+**Définition de la grossesse** : La couche `grossesse` doit être réservée aux mentions de l'état gravidique, des examens prénataux (échographies) ou des réflexions sur l'enfant à venir, dès lors qu'elles ne font pas partie du processus immédiat de mise au monde.
+
+
 _____
 
 # Étapes de paramétrage INCEpTION : 
 
-- ## Création de layer (couche) 
+- ### Création de layer (couche) 
 
 La layer est la couche/catégorie générale d’annotation. 
 
+## Le module A (accouchement) : 
+
 ### > **scene\_accouchement (granularité scène entière)**  
   - span  
-  - Annotation des scènes d'accouchements : granularité niveau phrase granularity : sentence-level  
+  - Annotation des scènes d'accouchements
+  - granularity : sentence-level  
   - **overlap** : any
 
-  ### > **phase\_accouchement**  
+### > **phase\_accouchement**  
 - span  
 - annotation de l’accouchement, dans les scènes d'accouchement  
 - granularity : token-level  
@@ -72,20 +92,43 @@ La layer est la couche/catégorie générale d’annotation.
 	      - **tagset** : Wich\_character\_here  
 	      - **editor type** : combo-box
 
+### > **complication**  
+  - span  
+  - Phases de complication liée aux scènes d'accouchements  
+  - granularity : token-level  
+  - **overlap** : any
+	 - **features (à définir !!):**   
+	      - which\_complication 
+	      - **type** : primitive: String  
+	      - Différentes complications liées aux phases d’accouchements
+	      - **tagset** : which\_complication
+	      - **editor type** : combo-box
+          - exemple : *« Dystocie des épaules »*
+    
+
+### > **intervention_medicale**
+	- span
+	- Annotation des différentes interventions médicales réalisées durant les phases d'accouchement
+	- granularity : token-level  
+  	- overlap : any
+	- **features (à définir !!):**   
+	      - which\_intervention\_medicale
+	      - **type** : primitive: String  
+	      - Différentes interventions médicales
+	      - **tagset** : which\_intervention\_medicale
+	      - **editor type** : combo-box
+		  - exemple : *« manœuvre de Jacquemier »*
+		
+	
+
+## Le module B (grossesse) :
 
 ### > **grossesse (granularité scène entière)**  
   -  span  
   - Annotation des mentions de la grossesse : granularité niveau phrase
   - granularity : sentence-level  
   - **overlap** : any
-
-
-### > **complication**  
-  - span  
-  - Phases de complication liée aux scènes d'accouchements  
-  - granularity : token-level  
-  - **overlap** : any
-
+  - *Exemple* : « Je suis à plus de sept mois et demi de grossesse »
 
 
 ________
@@ -144,7 +187,6 @@ L’accouchement ne s’achève réellement que vingt à trente minutes plus tar
   - fra  
   - Différentes complications liées aux phases d’accouchements
 	  - *Types de complications à préciser
-
 
 
 ____
